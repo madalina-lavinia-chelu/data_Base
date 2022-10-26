@@ -3,7 +3,7 @@
 
 >#### 1.1. Crearea înregistrărilor  Instrucțiunea INSERT
 
-      Pentru a adăuga înregistrări într-o tabelă se folosește instrucțiunea INSERT. Aceasta are mai multe variații, pentru a adăuga una sau mai multe înregistări deodata, pentru a da valori doar pentru unele atribute, sau pentru toate atributele dintr-o tabelă.
+>Pentru a adăuga înregistrări într-o tabelă se folosește instrucțiunea INSERT. Aceasta are mai multe variații, pentru a adăuga una sau mai multe înregistări deodata, pentru a da valori doar pentru unele atribute, sau pentru toate atributele dintr-o tabelă.
 
 >> Sintaxa generală: 
 
@@ -74,7 +74,7 @@ INSERT INTO produs VALUES();```
  
 >#### 1.2 Modificarea înregistrărilor - Instrucțiunea UPDATE 
 
-      Pentru actualizarea unei înregistrări dintr-o tabelă, se folosește instrucțiunea UPDATE. Folosind această instrucțiune, se pot actualiza oricâte atribute deodată, iar înregistrările vizate de update vor fi filtrate cu ajutorul clauzei WHERE.
+> Pentru actualizarea unei înregistrări dintr-o tabelă, se folosește instrucțiunea UPDATE. Folosind această instrucțiune, se pot actualiza oricâte atribute deodată, iar înregistrările vizate de update vor fi filtrate cu ajutorul clauzei WHERE.
 
 
  
@@ -112,7 +112,7 @@ Restricții
  
 >#### 1.3. Crearea înregistrărilor - Instrucțiunea DELETE
 
-      Pentru a șterge înregistrări dintr-o tabelă, se folosește instrucțiunea DELETE. Aceasta se poate folosi împreună cu clauza WHERE pentru a șterge anumite înregistrări, sau fără condiții pentru a șterge toate înregistrările.
+> Pentru a șterge înregistrări dintr-o tabelă, se folosește instrucțiunea DELETE. Aceasta se poate folosi împreună cu clauza WHERE pentru a șterge anumite înregistrări, sau fără condiții pentru a șterge toate înregistrările.
 > Dacă se șterge o anumită înregistrare, id-ul acesteia nu va mai fi refolosit automat de către AUTO_INCREMENT, dar poate fi asociat manual unei înregistrări. De asemenea, dacă se șterg toate înregistrările, AUTO_INCREMENT-ul nu se resetează automat. Totuși, acesta poate fi resetat cu instrucțiunea ALTER TABLE <nume_tabelă> AUTO_INCREMENT = <valoare>
     
 >> Sintaxa generală: 
@@ -156,7 +156,7 @@ Restricții
  
 >#### 1.3. Crearea înregistrărilor - Instrucțiunea SELECT
 
-      Pentru a prelua înregistrări dintr-o tabelă se folosește instrucțiunea SELECT. În aceasta se specifică ce atribute se preiau, iar dacă se dorește preluarea tuturor atributelor, se folosește caracterul * (se citește ALL). Această instrucțiune este întotdeauna urmată de clauza FROM, unde se specifică tabela din care se preiau datele.
+> Pentru a prelua înregistrări dintr-o tabelă se folosește instrucțiunea SELECT. În aceasta se specifică ce atribute se preiau, iar dacă se dorește preluarea tuturor atributelor, se folosește caracterul * (se citește ALL). Această instrucțiune este întotdeauna urmată de clauza FROM, unde se specifică tabela din care se preiau datele.
 
     
 
@@ -188,7 +188,7 @@ SELECT denumire AS nume_produs, pret `pret recomandat`, descriere FROM produs;
  
 >#### 1.3. Crearea înregistrărilor - Filtrarea datelor
 
-      Instrucțiunea SELECT conține de multe ori și clauza WHERE folosită pentru a filtra datele.
+> Instrucțiunea SELECT conține de multe ori și clauza WHERE folosită pentru a filtra datele.
 
       Pe această clauză se pot adăuga oricâte filtrări conectate prin AND (și), respectiv OR (ori). Atunci când se face o combinație de AND/OR, AND-ul are prioritate, iar daca se dorește efectuarea filtrărilor într-o anumită ordine, se folosesc paranteze rotunde. 
 
