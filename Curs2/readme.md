@@ -61,13 +61,15 @@ VALUES
 INSERT INTO <nume_tabelă>
 SET <a1> = <v1>, <a2>=<v2>;
 INSERT INTO produs
-SET denumire = 'laptop', pret = 3500;```
+SET denumire = 'laptop', pret = 3500;
+```
 
 * adăugarea unei înregistrări, doar cu valori default/NULL
 
 ```sql
 INSERT INTO <nume_tabelă> VALUES();
-INSERT INTO produs VALUES();```
+INSERT INTO produs VALUES();
+```
 
 
  
@@ -88,7 +90,8 @@ VARIAȚII:
 UPDATE <nume_tabelă> SET <atribut> = <valoare>;
 UPDATE produs SET reducere = 10;
 UPDATE produs SET pret = pret * 0.90;
--- se aplică o reducere de 10% pentru toate produsele```
+-- se aplică o reducere de 10% pentru toate produsele
+```
 
 * update cu condiții
 
@@ -127,7 +130,8 @@ VARIAȚII:
 DELETE FROM <nume_tabelă>
 DELETE FROM produs;
 ALTER TABLE produs AUTO_INCREMENT = 1; 
--- resetare auto increment, pentru ca noile înregistrări să înceapă iar de la 1```
+-- resetare auto increment, pentru ca noile înregistrări să înceapă iar de la 1
+```
 
 * ștergerea unor anumite înregistrări
 
@@ -148,7 +152,7 @@ Restricții
 * nu se poate rula DELETE fără condiții dacă există cel puțin o înregistrare în acea tabelă de care depinde un Foreign Key
 * o altă instrcțiune pentru a șterge toate datele dintr-o tabelă este TRUNCATE <nume_tabelă> - aceasta șterge si re-crează tabela (se resetează și AUTO_INCREMENT) - dar nu poate fi folosită pentru o tabelă care este referențiată de o altă tabelă (nu contează daca există sau nu înregistrări adăugate, ci doar structura tabelelor)
 
-![plot](C:\Users\Lavinia\Desktop\data_Base\Curs2\delete_r.png)
+![plot](https://github.com/madalina-lavinia-chelu/data_Base/blob/main/Curs2/delete_r.png)
  
 
 
@@ -180,7 +184,8 @@ SELECT denumire, pret FROM produs;```
 SELECT <a1> AS <alias1>, <a2>, <a3> AS <alias3> FROM <nume_tabelă>; 
 -- nu toate atributele să aibă un alias, iar cuvântul cheie AS se poate omite
 SELECT denumire AS nume_produs, pret `pret recomandat`, descriere FROM produs; 
--- dacă se omite AS se pune doar un spațiu între atribut și alias, iar dacă alias-ul conține spații, acesta se pune între backticks ``(apostroafe înclinate)```
+-- dacă se omite AS se pune doar un spațiu între atribut și alias, iar dacă alias-ul conține spații, acesta se pune între backticks ``(apostroafe înclinate)
+```
  
 
 
