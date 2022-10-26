@@ -41,7 +41,8 @@ VALUES
 INSERT INTO produs 
 VALUES
 (NULL, 'laptop', 3500, 'laptop lenovo cu 8Gb RAM si 512Gb SSD'),
-(NULL, 'casti', 150, 'casti wireless');```
+(NULL, 'casti', 150, 'casti wireless');
+```
 
 * adăugarea mai multor înregistrări, specificând valori doar pentru unele atribute
 
@@ -53,7 +54,8 @@ VALUES
 INSERT INTO produs(denumire, pret) 
 VALUES
 ('laptop', 3500),
-('casti', 150);```
+('casti', 150);
+```
 
 * adăugarea unei înregistrări, folosind instrucțiunea SET
 
@@ -186,7 +188,8 @@ SELECT denumire, pret FROM produs;
 SELECT <a1> AS <alias1>, <a2>, <a3> AS <alias3> FROM <nume_tabelă>; 
 -- nu toate atributele să aibă un alias, iar cuvântul cheie AS se poate omite
 SELECT denumire AS nume_produs, pret `pret recomandat`, descriere FROM produs; 
--- dacă se omite AS se pune doar un spațiu între atribut și alias, iar dacă alias-ul conține spații, acesta se pune între backticks ``(apostroafe înclinate)
+-- dacă se omite AS se pune doar un spațiu între atribut și alias,
+-- iar dacă alias-ul conține spații, acesta se pune între backticks ``(apostroafe înclinate)
 ```
  
 
