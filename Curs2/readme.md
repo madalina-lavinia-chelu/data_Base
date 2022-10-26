@@ -195,9 +195,11 @@ SELECT denumire AS nume_produs, pret `pret recomandat`, descriere FROM produs;
 
 
 ```sql
+
 SELECT <a1>, <a2>, ..., <an>
 FROM <nume_tabelă>
-WHERE <exp1> AND/OR <exp2> ... AND/OR <expn>;```
+WHERE <exp1> AND/OR <exp2> ... AND/OR <expn>;
+```
 
 
 Principalele operații și filtrări ce se pot face pe where sunt:
@@ -249,4 +251,5 @@ WHERE denumire LIKE '%laptop%' AND pret <= 5000
 ORDER BY pret DESC, denumire
 LIMIT 10;
 
--- se preia denumirea și prețul primelor 10 produse, care conțin în denumire laptop și au prețul mai mic sau egal cu 5000. acestea sunt ordonate după preț descendent, iar dacă au același preț, sunt ordonate după denumire, ascendent```
+-- se preia denumirea și prețul primelor 10 produse, care conțin în denumire laptop și au prețul mai mic sau egal cu 5000. acestea sunt ordonate după preț descendent, iar dacă au același preț, sunt ordonate după denumire, ascendent
+```
