@@ -158,7 +158,7 @@ Restricții
 
  
  
->#### 1.3. Crearea înregistrărilor - Instrucțiunea SELECT
+>#### 1.4. Crearea înregistrărilor - Instrucțiunea SELECT
 
 > Pentru a prelua înregistrări dintr-o tabelă se folosește instrucțiunea SELECT. În aceasta se specifică ce atribute se preiau, iar dacă se dorește preluarea tuturor atributelor, se folosește caracterul * (se citește ALL). Această instrucțiune este întotdeauna urmată de clauza FROM, unde se specifică tabela din care se preiau datele.
 
@@ -170,13 +170,15 @@ VARIAȚII:
 
 ```sql 
 SELECT * FROM <nume_tabelă>;
-SELECT * FROM produs;```
+SELECT * FROM produs;
+```
 
 * selectarea unor anumite atribute
 
 ```sql 
 SELECT <a1>, <a2>, ..., <an> FROM <nume_tabelă>;
-SELECT denumire, pret FROM produs;```
+SELECT denumire, pret FROM produs;
+```
 
 * asocierea unui alias pentru atribute - dacă se dorește ca la afișare să aiba un alt nume
 
@@ -191,11 +193,11 @@ SELECT denumire AS nume_produs, pret `pret recomandat`, descriere FROM produs;
 
  
  
->#### 1.3. Crearea înregistrărilor - Filtrarea datelor
+>#### 1.5. Crearea înregistrărilor - Filtrarea datelor
 
 > Instrucțiunea SELECT conține de multe ori și clauza WHERE folosită pentru a filtra datele.
 
-      Pe această clauză se pot adăuga oricâte filtrări conectate prin AND (și), respectiv OR (ori). Atunci când se face o combinație de AND/OR, AND-ul are prioritate, iar daca se dorește efectuarea filtrărilor într-o anumită ordine, se folosesc paranteze rotunde. 
+Pe această clauză se pot adăuga oricâte filtrări conectate prin AND (și), respectiv OR (ori). Atunci când se face o combinație de AND/OR, AND-ul are prioritate, iar daca se dorește efectuarea filtrărilor într-o anumită ordine, se folosesc paranteze rotunde. 
 
 
 
@@ -256,5 +258,6 @@ WHERE denumire LIKE '%laptop%' AND pret <= 5000
 ORDER BY pret DESC, denumire
 LIMIT 10;
 
--- se preia denumirea și prețul primelor 10 produse, care conțin în denumire laptop și au prețul mai mic sau egal cu 5000. acestea sunt ordonate după preț descendent, iar dacă au același preț, sunt ordonate după denumire, ascendent
+-- se preia denumirea și prețul primelor 10 produse, care conțin în denumire laptop și au prețul mai mic sau egal cu 5000. 
+-- acestea sunt ordonate după preț descendent, iar dacă au același preț, sunt ordonate după denumire, ascendent
 ```
