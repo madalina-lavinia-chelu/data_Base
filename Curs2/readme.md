@@ -108,7 +108,9 @@ Restricții
 > La actualizarea înregistrărilor, trebuie urmate câteva reguli simple:
 
 * condiția după care se face actualizarea ar trebui să conțină un atribut cu valori unice; astfel se evită actualizarea mai multor înregistrări, din greșeală
-    * ex: se face actualizarea prețului unui produs după condiția denumire = 'laptop' - sunt șanse foarte mari să existe mai multe produse care îndeplinesc această condiție, așa că vor fi actualizate toate aceste produse; dacă se voia de fapt actualizarea unui anume produs, aceasta ar fi trebuit făcută dupa condiția id = <id_produs> - la actualizarea după Primary Key, este clar că se actualizează un singur produs 
+    
+    * ex: se face actualizarea prețului unui produs după condiția denumire = 'laptop' - sunt șanse foarte mari să existe mai multe produse care îndeplinesc această condiție, așa că vor fi actualizate toate aceste produse; dacă se voia de fapt actualizarea unui anume produs, aceasta ar fi trebuit făcută dupa condiția id = (id_produs) - la actualizarea după Primary Key, este clar că se actualizează un singur produs 
+    
     * implicit, MySQL are o setare care nu permite actualizările după atribute non-unice, tocmai pentru a veni cu o atenționare în plus, în cazul în care utilizatorul dorește să facă astfel de operații - această setare se numește safe updates și se activează/dezactivează setând *sql_safe_updates* cu valoarea 1-true/0-false: **SET SQL_SAFE_UPDATES = 0;**
 * nu se recomană actualizarea cheii primare (fie ea adăgată manual sau cu AUTO_INCREMENT)
 
@@ -118,7 +120,8 @@ Restricții
 ### 1.3. Crearea înregistrărilor - Instrucțiunea DELETE
 
 > Pentru a șterge înregistrări dintr-o tabelă, se folosește instrucțiunea DELETE. Aceasta se poate folosi împreună cu clauza WHERE pentru a șterge anumite înregistrări, sau fără condiții pentru a șterge toate înregistrările.
-> Dacă se șterge o anumită înregistrare, id-ul acesteia nu va mai fi refolosit automat de către AUTO_INCREMENT, dar poate fi asociat manual unei înregistrări. De asemenea, dacă se șterg toate înregistrările, AUTO_INCREMENT-ul nu se resetează automat. Totuși, acesta poate fi resetat cu instrucțiunea ALTER TABLE <nume_tabelă> AUTO_INCREMENT = <valoare>
+
+> Dacă se șterge o anumită înregistrare, id-ul acesteia nu va mai fi refolosit automat de către AUTO_INCREMENT, dar poate fi asociat manual unei înregistrări. De asemenea, dacă se șterg toate înregistrările, AUTO_INCREMENT-ul nu se resetează automat. Totuși, acesta poate fi resetat cu instrucțiunea ALTER TABLE nume_tabelă AUTO_INCREMENT = (valoare)
     
 >> Sintaxa generală: 
 
