@@ -122,7 +122,7 @@ Restricții
     
 >> Sintaxa generală: 
 
->>** DELETE FROM <nume_tabelă> WHERE <condiții>**
+>> **DELETE FROM <nume_tabelă> WHERE <condiții>**
 
 VARIAȚII:
 
